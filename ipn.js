@@ -1,11 +1,33 @@
 var https = require('https');
-var qs = require('querystring');
+var _ = require('underscore');
 
-var SANDBOX_URL = 'www.sandbox.paypal.com';
-var REGULAR_URL = 'www.paypal.com';
+var ppIpn = {};
+
+ppIpn.SANDBOX_URL = 'www.sandbox.paypal.com';
+ppIpn.REGULAR_URL = 'www.paypal.com';
 
 
-exports.verify = function verify(params, settings, callback) {
+ppIpn.parseQuery = function (qstr) {
+  var query = {};
+  var a = qstr.substr(1).split('&');
+  for (var i = 0; i < a.length; i++) {
+      var b = a[i].split('=');
+      query[b[0]] = b[1] || '';
+  }
+  return query;
+};
+
+// Build a new querystring.
+ppIpn.stringify = function (params) {
+  var str;
+  var pairs = _.pairs(params);
+  _.each(pairs, function (pair) {
+    str = str + '&' + pair[0] + '=' + pair[1];
+  }); 
+  return str;
+};
+
+ppIpn.verify = function verify (params, settings, callback) {
   //Settings are optional, use default settings if not set
   if (typeof callback === 'undefined' && typeof settings === 'function') {
     callback = settings;
@@ -22,12 +44,11 @@ exports.verify = function verify(params, settings, callback) {
   }
 
   params.cmd = '_notify-validate';
-
-  var body = qs.stringify(params);
+  var body = ppIpn.stringify(params);
 
   //Set up the request to paypal
   var req_options = {
-    host: (params.test_ipn) ? SANDBOX_URL : REGULAR_URL,
+    host: (params.test_ipn) ? ppIpn.SANDBOX_URL : ppIpn.REGULAR_URL,
     method: 'POST',
     path: '/cgi-bin/webscr',
     headers: {'Content-Length': body.length}
@@ -67,3 +88,5 @@ exports.verify = function verify(params, settings, callback) {
 
   req.end();
 };
+
+module.exports = ppIpn;
