@@ -1,0 +1,20 @@
+{
+  "name": "pp-ipn",
+  "version": "1.0.2",
+  "description": "Package for verifying Paypal IPN messages with latin characters",
+  "main": "ipn.js",
+  "dependencies": {
+    "underscore": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "paypal",
+    "ipn",
+    "latin",
+    "characters"
+  ],
+  "author": "robodo",
+  "license": "MIT"
+}
