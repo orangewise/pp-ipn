@@ -19,10 +19,15 @@ ppIpn.parseQuery = function (qstr) {
 
 // Build a new querystring.
 ppIpn.stringify = function (params) {
-  var str;
+  var str = '';
   var pairs = _.pairs(params);
   _.each(pairs, function (pair) {
-    str = str + '&' + pair[0] + '=' + pair[1];
+    if (pair[1].includes('%')) // skip
+    {
+      str = str + '&' + pair[0] + '=' + pair[1];
+    } else {
+      str = str + '&' + pair[0] + '=' + encodeURIComponent(unescape(pair[1]));
+    }
   }); 
   return str;
 };
