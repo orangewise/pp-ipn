@@ -1,7 +1,7 @@
 {
   "name": "pp-ipn",
-  "version": "1.0.2",
-  "description": "Package for verifying Paypal IPN messages with latin characters",
+  "version": "1.0.3",
+  "description": "Package for verifying Paypal IPN messages with escaped latin characters.",
   "main": "ipn.js",
   "dependencies": {
     "underscore": "*"
