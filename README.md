@@ -1,6 +1,6 @@
 # TLDR
 
-Drop-in replacement for paypal-ipn.
+Drop-in replacement for paypal-ipn@3.0.0.
 
 # Why?
 

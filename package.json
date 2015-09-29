@@ -15,6 +15,10 @@
     "latin",
     "characters"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orangewise/pp-ipn.git"
+  },
   "author": "robodo",
   "license": "MIT"
 }
