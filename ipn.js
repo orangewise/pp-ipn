@@ -17,7 +17,7 @@ ppIpn.parseQuery = function (qstr) {
   return query;
 };
 
-// Build a new querystring.
+// Build a querystring from the params object.
 ppIpn.stringify = function (params) {
   var str = '';
   var pairs = _.pairs(params);
