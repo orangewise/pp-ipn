@@ -20,5 +20,8 @@
     "url": "https://github.com/orangewise/pp-ipn.git"
   },
   "author": "robodo",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tap": "^5.4.3"
+  }
 }
