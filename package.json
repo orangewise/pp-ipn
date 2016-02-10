@@ -8,7 +8,7 @@
     "underscore": "^1.8.3"
   },
   "scripts": {
-    "test": "tap --cov test/ipn.js"
+    "test": "tap --cov test*/ipn.js"
   },
   "keywords": [
     "paypal",

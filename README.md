@@ -100,3 +100,19 @@ In Express, the request parameters are in `req.body`:
 ```javascript
 ipn.verify(req.body, callback_function);
 ```
+
+
+
+## Testing
+
+Tests are written in Node Tap, run them like this:
+
+```
+npm t
+```
+
+If you would like a more fancy report: 
+
+```
+npm test -- --cov --coverage-report=lcov
+```
