@@ -22,7 +22,7 @@ ppIpn.stringify = function (params) {
   var str = '';
   var pairs = _.pairs(params);
   _.each(pairs, function eachPair (pair) {
-    if (pair[1].includes('%')) // skip
+    if (pair[1].indexOf('%') > -1) // skip
     {
       str = str + '&' + pair[0] + '=' + pair[1];
     } else {

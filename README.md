@@ -1,5 +1,7 @@
 # TLDR
 
+[![Build Status](https://travis-ci.org/orangewise/pp-ipn.svg?branch=master)](https://travis-ci.org/orangewise/pp-ipn)
+
 Drop-in replacement for paypal-ipn@3.0.0.
 
 # Why?
