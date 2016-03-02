@@ -8,7 +8,7 @@
     "underscore": "^1.8.3"
   },
   "scripts": {
-    "test": "tap --cov test*/ipn.js"
+    "test": "tap --cov test*/ipn.js --coverage"
   },
   "keywords": [
     "paypal",
@@ -23,6 +23,7 @@
   "author": "robodo",
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^2.11.8",
     "tap": "^5.4.3"
   }
 }

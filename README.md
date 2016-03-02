@@ -1,4 +1,7 @@
-# TLDR [![Build Status](https://travis-ci.org/orangewise/pp-ipn.svg?branch=master)](https://travis-ci.org/orangewise/pp-ipn)
+# TLDR 
+
+[![Build Status](https://travis-ci.org/orangewise/pp-ipn.svg?branch=master)](https://travis-ci.org/orangewise/pp-ipn)
+[![Coverage Status](https://coveralls.io/repos/github/orangewise/pp-ipn/badge.svg?branch=master)](https://coveralls.io/github/orangewise/pp-ipn?branch=master)
 
 Drop-in replacement for paypal-ipn@3.0.0.
 
