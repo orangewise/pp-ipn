@@ -3,8 +3,8 @@ var _ = require('underscore');
 
 var ppIpn = {};
 
-ppIpn.SANDBOX_URL = 'www.sandbox.paypal.com';
-ppIpn.REGULAR_URL = 'www.paypal.com';
+ppIpn.SANDBOX_URL = 'ipnpb.sandbox.paypal.com';
+ppIpn.REGULAR_URL = 'ipnpb.paypal.com';
 
 
 ppIpn.parseQuery = function (qstr) {
