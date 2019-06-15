@@ -4,11 +4,10 @@
   "description": "Package for verifying Paypal IPN messages with escaped latin characters.",
   "main": "ipn.js",
   "dependencies": {
-    "querystring": "^0.2.0",
     "underscore": "^1.8.3"
   },
   "scripts": {
-    "test": "tap --cov test*/ipn.js --coverage"
+    "test": "standard && tap --cov test*/ipn.js --coverage"
   },
   "keywords": [
     "paypal",
@@ -23,7 +22,7 @@
   "author": "robodo",
   "license": "MIT",
   "devDependencies": {
-    "coveralls": "^2.11.8",
-    "tap": "^5.4.3"
+    "standard": "^12.0.1",
+    "tap": "^14.2.3"
   }
 }
